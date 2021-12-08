@@ -1,0 +1,57 @@
+a: 
+add $t1, $t2, $t3 
+addu $t1, $t2, $t3 
+and $s0, $s1, $s2 
+jr $t0 
+nor $t1, $t2, $t3 
+or $t1, $t2, $t3 
+slt $t1, $t2, $t3 
+sltu $t1, $t2, $t3 
+e: 
+sll $t1, $t2, 5 
+srl $t1, $t2, 10 
+sub $t1, $t2, $t3 
+subu $t1, $t2, $t3 
+div $t1, $t2 
+divu $t1, $t2 
+mflo $t1 
+mfhi $t2 
+mfc0 $t1, $t2 
+mult $t1, $t2 
+multu $t1, $t2 
+sra $t1, $t2, 10 
+b: 
+addi $t4, $t5, 69 
+addiu $t6, $t7, 96 
+andi $s3, $s4, 10 
+beq $s5, $s6, a 
+bne $s7, $a0, c 
+lbu $a1, 40($a2) 
+lhu $t8, -20($t9) 
+ll $t0, -100($t2) 
+lui $t1, 100 
+lw $t1, -10($t2) 
+ori $t1, $t2, 69 
+slti $t1, $t2, -5 
+sltiu $t1, $t2, 10 
+f: 
+sb $t1, -10($t2) 
+sc $t1, 10($t2) 
+sh $t1, -100($t2) 
+sw $t1, -5($t2) 
+lwc1 $1, -100($t1) 
+ldc1 $1, -10($t1) 
+sdc1 $1, -100($t2) 
+swc1 $1, -10($t2) 
+c: 
+j d 
+jal e 
+d: 
+li $s0, 69 
+la $a0, f 
+blt $t1, $t2, a 
+bgt $t1, $t2, a 
+ble $t1, $t2, a 
+bge $t1, $t2, a 
+move $t1, $t2 
+syscall 
